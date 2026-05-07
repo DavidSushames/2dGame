@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - PrefabTrigger
+  - Fuel Can
+  - Laser
+  - Environment
   layers:
   - Default
   - TransparentFX

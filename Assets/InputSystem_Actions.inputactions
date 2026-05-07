@@ -82,7 +82,7 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -91,6 +91,15 @@
                     "name": "Restart",
                     "type": "Button",
                     "id": "791fbf31-e0cd-4b1e-bde9-c9961572a78c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "94601822-e13e-4f6b-8da3-d764a99375a4",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -486,11 +495,22 @@
                 {
                     "name": "",
                     "id": "a263f3a6-d493-487c-b29e-33d0f1cd9d69",
-                    "path": "<Keyboard>/#(R)",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96159561-4233-4c75-a67a-7daf58c20327",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

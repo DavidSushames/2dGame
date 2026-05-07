@@ -55,13 +55,10 @@ public class HeroManager : MonoBehaviour
    
     void OnCollisionEnter2D(Collision2D hit)
     {
-        onground = true;
-        Debug.Log("Hero has collided with ground");
-
-        if (hit.gameObject.tag == "Fuel Can")
+        if (hit.gameObject.tag == "Environment")
         {
-            Debug.Log("Fuel Can hit");
-            hit.gameObject.SetActive(false);
+            onground = true;
+            Debug.Log("Hero has collided with ground");
         }
     }
    
@@ -69,12 +66,16 @@ public class HeroManager : MonoBehaviour
    {
         Debug.Log("Trigger in hero script");
 
+        if (hit.gameObject.tag == "Fuel Can")
+        {
+            Debug.Log("Fuel Can hit"); 
+            hit.gameObject.SetActive(false);
+        }
         if (hit.gameObject.tag == "Laser")
         {
             Debug.Log("Laser hit");
             flashstart();
-            flashstart();
-                      
+            flashstart();          
         }
         if (hit.gameObject.tag == "Vent")
         {
@@ -164,7 +165,7 @@ public class HeroManager : MonoBehaviour
             anim.SetTrigger("Jump");
             Debug.Log("Up key pressed");
             rb2.AddForce(new Vector2(forwardforce, jumpforce), ForceMode2D.Impulse);
-            anim.Play("Hero Jump");
+            anim.Play("Jumping");
             onground = false;
             
         }
