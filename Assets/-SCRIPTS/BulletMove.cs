@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    
+    public float bulletspeed;
     Rigidbody2D cbody;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,14 +18,12 @@ public class BulletMove : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
-
 
     // Update is called once per frame
     void Update()
     {
-        //cbody.linearVelocity = new Vector2(1f, 0f);
+        cbody.linearVelocity = transform.right * bulletspeed;
         //cbody.angularVelocity = 100f;
-        cbody.AddForce(transform.right, (ForceMode2D)ForceMode.Force);
+        //cbody.AddForce(transform.right, (ForceMode2D)ForceMode.Force);
     }
 }
